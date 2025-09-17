@@ -15,18 +15,18 @@ routes:
     data:       tag.encyclopedia
     filter:     tag:encyclopedia
     order:      title asc
-    template:   index
+    template:   tag
   /languages/:
     controller: channel
     data:       tag.languages
     filter:     tag:languages
     order:      title asc
-    template:   index
+    template:   tag
   /reviews/:
     controller: channel
     data:       tag.reviews
     filter:     tag:reviews
-    template:   index
+    template:   tag
 
 collections:
   /posts/:
