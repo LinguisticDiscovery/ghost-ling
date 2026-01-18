@@ -3,6 +3,8 @@
   ^\/encyclopedia\/([a-z0-9-]+)\/$: /posts/$1
   ^\/glossary\/([a-z0-9-]+)\/$:     /posts/$1
   ^\/reviews\/([a-z0-9-]+)\/$:      /posts/$1
+  # Individual Articles
+  /posts/where-do-writing-systems-come-from: /borrowing-writing
 302:
   /blog:           /posts
   /books:          https://www.amazon.com/shop/linguisticdiscovery
