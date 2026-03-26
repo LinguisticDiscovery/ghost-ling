@@ -1,10 +1,10 @@
 :is(.tln, q) {
-  cursor:      copy;
+  cursor: copy;
   user-select: all;
 }
 
 dfn {
-  font-style:  normal;
+  font-style: normal;
   font-weight: bold;
 }
 
@@ -17,19 +17,18 @@ i em {
 }
 
 .ex-source {
-  float:                right;       /* fallback for inline-end */
-  float:                inline-end;
+  float: right; /* fallback for inline-end */
+  float: inline-end;
   padding-inline-start: 0.25em;
 }
 
 /* Increase specificity here to override Ghost styles. */
 .ex-table,
 .gh-table table.ex-table {
-
   font-family: var(--font-serif);
-  font-size:   1em;
-  margin:      0 !important;       /* Override Ghost styles, which are already *super* specific for this. */
-  word-break:  keep-all;
+  font-size: 1em;
+  margin: 0 !important; /* Override Ghost styles, which are already *super* specific for this. */
+  word-break: keep-all;
 
   .ex & {
     margin-inline-start: -0.5em;
@@ -40,10 +39,9 @@ i em {
   }
 
   & :is(td, th) {
-    border-bottom: none;                 /* Override Ghost styles. */
-    padding:       var(--text-padding);
+    border-bottom: none; /* Override Ghost styles. */
+    padding: var(--text-padding);
   }
-
 }
 
 .gh-table:has(.ex-table) {
@@ -63,39 +61,41 @@ i em {
 }
 
 .examples {
-
-  --ex-indent: 1.5em;
+  --em-color: red;
+  --ex-indent: 2em;
   --ex-margin: 1em;
 
-  counter-reset:        subexamples;
-  list-style-type:      none;
-  margin-block:         0;             /* Override user agent stylesheet. */
-  margin-bottom:        0;             /* Override Ghost styles. */
-  margin-top:           0 !important;  /* Override Ghost styles. */
-  padding:              0;
-  padding-inline-start: 0;             /* Override user agent stylesheet. */
-  padding-left:         0 !important;  /* Override Ghost styles. */
+  counter-reset: subexamples;
+  list-style-type: none;
+  margin-block: 0; /* Override user agent stylesheet. */
+  margin-bottom: 0; /* Override Ghost styles. */
+  margin-top: 0 !important; /* Override Ghost styles. */
+  padding: 0;
+  padding-inline-start: 0; /* Override user agent stylesheet. */
+  padding-left: 0 !important; /* Override Ghost styles. */
 
-  .ex {
-
-    counter-increment:   examples;
-    margin-block:        var(--ex-margin);
-    margin-inline-start: var(--ex-indent);
-    position:            relative;
-
-    &::before {
-      content:           '(' counter(examples) ')';
-      left:              calc(var(--ex-indent) * -1);
-      margin-inline-end: var(--ex-indent);
-      position:          absolute;
-    }
-
+  & :is(b, em) {
+    color: var(--em-color);
+    font-weight: bold;
   }
 
+  .ex {
+    counter-increment: examples;
+    margin-block: var(--ex-margin);
+    margin-inline-start: var(--ex-indent);
+    position: relative;
+
+    &::before {
+      content: '(' counter(examples) ')';
+      left: calc(var(--ex-indent) * -1);
+      margin-inline-end: var(--ex-indent);
+      position: absolute;
+    }
+  }
 }
 
 .fon {
-  cursor:      copy;
+  cursor: copy;
   font-family: var(--font-serif);
   user-select: all;
 }
@@ -117,11 +117,9 @@ i em {
 }
 
 .igl {
-
-  --em-color:               red;
-  --igl-indent:             0em;
+  --igl-indent: 0em;
   --igl-horizontal-spacing: 1.25em;
-  --igl-vertical-spacing:   0.25em;
+  --igl-vertical-spacing: 0.25em;
 
   display: block;
 
@@ -129,56 +127,51 @@ i em {
     font-variant: small-caps;
   }
 
-  & :is(b, em) {
-    color:       var(--em-color);
-    font-weight: bold;
-  }
-
   .morphemes,
   .words {
-    column-gap:          var(--igl-horizontal-spacing);
-    display:             flex;
-    flex-flow:           row wrap;
-    list-style:          none;
-    margin-block:        0 !important; /* Override Ghost styles. */
+    column-gap: var(--igl-horizontal-spacing);
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin-block: 0 !important; /* Override Ghost styles. */
     margin-inline-start: var(--igl-indent);
-    padding:             0em;
-    row-gap:             var(--igl-vertical-spacing);
+    padding: 0em;
+    row-gap: var(--igl-vertical-spacing);
   }
 
   .morpheme,
   .word {
-    display:        flex;
+    display: flex;
     flex-direction: column;
-    margin-block:   0 !important;  /* Override Ghost styles. */
+    margin-block: 0 !important; /* Override Ghost styles. */
   }
 
   .morpheme > *,
   .word > * {
-    margin:  0em;
+    margin: 0em;
     padding: 0em;
   }
 
   .txn {
     font-style: italic;
   }
-
 }
 
-.inex, i {
+.inex,
+i {
   font-style: italic;
 }
 
 mjx-assistive-mml {
   /* .visually-hidden */
   position: absolute;
-  width:    1px;
-  height:   1px;
-  margin:   -1px;
-  padding:  0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
-  clip:     rect(0, 0, 0, 0);
-  border:   0;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 p mjx-container svg {
@@ -205,20 +198,19 @@ p mjx-container svg {
 }
 
 .ortho {
-  cursor:      copy;
+  cursor: copy;
   font-family: var(--font-serif);
   user-select: all;
 }
 
 .phon {
-  cursor:      copy;
+  cursor: copy;
   font-family: var(--font-serif);
   user-select: all;
 }
 
 /* When using <q> for translations, use single quotes. */
 q {
-
   quotes: '‘' '’' '“' '”';
 
   &::before {
@@ -228,38 +220,33 @@ q {
   &::after {
     content: close-quote;
   }
-
 }
 
 .references {
-
-  list-style:           none;
-  margin:               0;
-  padding:              0;
-  padding-inline-start: 0;             /* Remove user agent padding. */
-  padding-left:         0 !important;  /* Override Ghost styles. */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0; /* Remove user agent padding. */
+  padding-left: 0 !important; /* Override Ghost styles. */
 
   & li {
-    --ref-indent:        2em;
+    --ref-indent: 2em;
     margin-inline-start: var(--ref-indent);
-    padding:             0;
-    text-indent:         calc(var(--ref-indent) * -1);
+    padding: 0;
+    text-indent: calc(var(--ref-indent) * -1);
   }
-
 }
 
 .subexamples {
-
-  display:             inline-block;
-  list-style-type:     lower-alpha;
+  display: inline-block;
+  list-style-type: lower-alpha;
   margin-inline-start: 1em;
-  margin-top:          0 !important;  /* Override Ghost styles. */
-  padding:             0em;
-  padding-left:        0 !important;  /* Override Ghost styles. */
+  margin-top: 0 !important; /* Override Ghost styles. */
+  padding: 0em;
+  padding-left: 0 !important; /* Override Ghost styles. */
 
   .subex {
     counter-increment: subexamples;
     padding-block-end: 0.5em;
   }
-
 }
