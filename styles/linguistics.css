@@ -119,7 +119,7 @@ i em {
 .igl {
   --igl-indent: 0em;
   --igl-horizontal-spacing: 1.25em;
-  --igl-vertical-spacing: 0.25em;
+  --igl-vertical-spacing: 0.5em;
 
   display: block;
 
@@ -133,7 +133,7 @@ i em {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
-    margin-block: 0 !important; /* Override Ghost styles. */
+    margin-block: 0.5em !important; /* Override Ghost styles. */
     margin-inline-start: var(--igl-indent);
     padding: 0em;
     row-gap: var(--igl-vertical-spacing);
